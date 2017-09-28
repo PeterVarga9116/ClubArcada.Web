@@ -16,7 +16,7 @@
     <RootNamespace>ClubArcada.Web</RootNamespace>
     <AssemblyName>ClubArcada.Web</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -125,6 +125,36 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\icons\icon_award.png" />
+    <Content Include="Content\images\icons\icon_award_big.png" />
+    <Content Include="Content\images\icons\icon_bounty.png" />
+    <Content Include="Content\images\icons\icon_bounty_big.png" />
+    <Content Include="Content\images\icons\icon_dealeraddon.png" />
+    <Content Include="Content\images\icons\icon_dealeraddon_big.png" />
+    <Content Include="Content\images\icons\icon_food.png" />
+    <Content Include="Content\images\icons\icon_food_big.png" />
+    <Content Include="Content\images\icons\icon_fullstack.png" />
+    <Content Include="Content\images\icons\icon_percentagebonus.png" />
+    <Content Include="Content\images\icons\icon_reentry.png" />
+    <Content Include="Content\images\icons\icon_reentry_big.png" />
+    <Content Include="Content\images\icons\icon_timebonus.png" />
+    <Content Include="Content\images\icons\icon_timebonus_big.png" />
+    <Content Include="Content\images\icons\logo_cgl.png" />
+    <Content Include="Content\images\icons\logo_loyal.png" />
+    <Content Include="Content\images\icons\logo_lvpt.png" />
+    <Content Include="Content\images\icons\t_01.png" />
+    <Content Include="Content\images\icons\t_010.png" />
+    <Content Include="Content\images\icons\t_011.png" />
+    <Content Include="Content\images\icons\t_02.png" />
+    <Content Include="Content\images\icons\t_03.png" />
+    <Content Include="Content\images\icons\t_04.png" />
+    <Content Include="Content\images\icons\t_05.png" />
+    <Content Include="Content\images\icons\t_06.png" />
+    <Content Include="Content\images\icons\t_07.png" />
+    <Content Include="Content\images\icons\t_08.png" />
+    <Content Include="Content\images\icons\t_09.png" />
+    <Content Include="Content\images\px01.jpg" />
+    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -139,6 +169,10 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -146,11 +180,13 @@
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.js" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\parallax.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -161,6 +197,9 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -170,7 +209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
@@ -188,7 +226,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50088</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50088/</IISUrl>
+          <IISUrl>http://localhost/ClubArcada.Web</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
