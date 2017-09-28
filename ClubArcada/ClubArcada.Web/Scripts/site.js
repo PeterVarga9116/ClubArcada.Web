@@ -17,3 +17,4 @@ function SetWelcomeHeignt() {
     var height = $(window).height();
     section.css('height', height + "px");
 };
+
