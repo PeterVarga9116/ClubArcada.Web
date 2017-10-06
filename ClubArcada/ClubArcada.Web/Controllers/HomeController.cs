@@ -1,4 +1,5 @@
-﻿using ClubArcada.Common.BusinessObjects.DataClasses;
+﻿using ClubArcada.Common;
+using ClubArcada.Common.BusinessObjects.DataClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,12 @@ namespace ClubArcada.Web.Controllers
         {
             var t = Common.BusinessObjects.Data.TournamentData.GetUpcomingList(CR);
             return Json(t, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult GetUpcomingMainEvent()
+        {
+            var tour = Common.BusinessObjects.Data.TournamentData.GetUpcomingList(CR).SingleOrDefault(t => t.GameType != (int)eGameType.Qualification);
+            return Json(tour, JsonRequestBehavior.AllowGet);
         }
 
         public JsonResult GetLatestEvents()

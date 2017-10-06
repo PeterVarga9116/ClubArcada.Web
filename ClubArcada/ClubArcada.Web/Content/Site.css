@@ -1,4 +1,7 @@
-﻿/*.navbar {
+﻿body {
+  font-family: 'Saira Condensed', sans-serif; }
+
+/*.navbar {
     background-color: black;
     border: 0;
     border-radius: 0;
@@ -50,7 +53,8 @@
 }*/
 section {
   padding-bottom: 50px;
-  padding-top: 50px; }
+  padding-top: 50px;
+  overflow: hidden; }
 
 .parallax-window {
   background-position: center, top; }
@@ -61,19 +65,41 @@ section {
 #welcome-content {
   position: absolute;
   width: calc(100% - 200px);
-  background-color: #000;
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.9);
   height: 500px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+  #welcome-content .welcome-title {
+    color: white;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 80px; }
+
+.main-event-container {
+  margin-top: 50px; }
+  .main-event-container .main-event-title {
+    text-align: center;
+    color: white;
+    font-size: 26px; }
+  .main-event-container .main-event-name {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    display: block; }
+  .main-event-container .main-event-desc {
+    text-align: center;
+    color: white;
+    font-size: 20px; }
 
 .upcomingPanel {
   margin-top: 10px;
   margin-bottom: 10px;
   height: 50px;
   font-family: 'Roboto', sans-serif;
-  border-radius: 2px; }
+  border-radius: 2px;
+  overflow: hidden; }
   .upcomingPanel .eventTitle {
     color: white;
     margin-top: 5px;
@@ -95,13 +121,18 @@ section {
   font-size: 18px;
   text-align: center; }
 
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 768px) {
   section {
     padding-bottom: 20px;
     padding-top: 20px; }
   #welcome-content {
     width: calc(100% - 50px);
-    height: calc(100% - 100px); }
+    height: calc(100% - 150px);
+    bottom: 20px;
+    top: 53%; }
+    #welcome-content .welcome-title {
+      margin-top: 30px;
+      font-size: 45px; }
   .upcomingPanel {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -124,4 +155,15 @@ section {
       width: 34px; }
   .phase-title {
     font-size: 14px; } }
+
+.parallax {
+  /* The image used */
+  background-image: url("images/px01.jpg");
+  /* Set a specific height */
+  height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover; }
 

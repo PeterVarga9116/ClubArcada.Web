@@ -137,6 +137,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\arrows.svg" />
     <Content Include="Content\images\icons\icon_award.png" />
     <Content Include="Content\images\icons\icon_award_big.png" />
     <Content Include="Content\images\icons\icon_bounty.png" />
@@ -166,6 +167,7 @@
     <Content Include="Content\images\icons\t_08.png" />
     <Content Include="Content\images\icons\t_09.png" />
     <Content Include="Content\images\px01.jpg" />
+    <Content Include="Content\images\sy-loader.gif" />
     <Content Include="Content\site.css">
       <DependentUpon>site.scss</DependentUpon>
     </Content>
@@ -197,6 +199,7 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="Content\slippry.scss" />
+    <None Include="Properties\PublishProfiles\dev.pubxml" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />

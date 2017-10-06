@@ -5,7 +5,19 @@ app.controller("ctrl-home", function ($scope) {
     $scope.upcomingEvents = [];
     $scope.recentEvents = [];
     $scope.banners = [];
+    $scope.mainEvent = null;
 
+    $scope.loadUpcomingMainEvent = function () {
+        $.ajax({
+            url: "Home/GetUpcomingMainEvent",
+            success: function (data) {
+                $scope.mainEvent = data;
+                $scope.$apply();
+
+                console.log("main",$scope.mainEvent);
+            }
+        });
+    };
 
     $scope.loadUpcomingEvents = function () {
         $.ajax({
@@ -72,16 +84,19 @@ app.controller("ctrl-home", function ($scope) {
     };
 
     $scope.SetBackground = function (color) {
-        var borderColor = color[2];
-        var backTopColor = color[1];
-        var backBottomColor = color[0];
-        return {
-            border: "solid 1px #" + borderColor,
-            background: "#" + backTopColor,
-            background: "-moz-linear-gradient(top,  #" + backTopColor + " 0%, #" + backBottomColor + " 100%)",
-            background: "-webkit-linear-gradient(top,  #" + backTopColor + " 0%,#" + backBottomColor + " 100%)",
-            background: "linear-gradient(to bottom,  #" + backTopColor + " 0%,#" + backBottomColor + " 100%)",
-            filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#" + backTopColor + "', endColorstr='#" + backBottomColor + "',GradientType=0 )"
+
+        if (color) {
+            var borderColor = color[2];
+            var backTopColor = color[1];
+            var backBottomColor = color[0];
+            return {
+                border: "solid 1px #" + borderColor,
+                background: "#" + backTopColor,
+                background: "-moz-linear-gradient(top,  #" + backTopColor + " 0%, #" + backBottomColor + " 100%)",
+                background: "-webkit-linear-gradient(top,  #" + backTopColor + " 0%,#" + backBottomColor + " 100%)",
+                background: "linear-gradient(to bottom,  #" + backTopColor + " 0%,#" + backBottomColor + " 100%)",
+                filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#" + backTopColor + "', endColorstr='#" + backBottomColor + "',GradientType=0 )"
+            }
         }
     };
 
@@ -92,6 +107,7 @@ app.controller("ctrl-home", function ($scope) {
         $scope.loadRecentEvents();
         $scope.loadUpcomingEvents();
         $scope.loadBanners();
+        $scope.loadUpcomingMainEvent();
     })();
 
 });

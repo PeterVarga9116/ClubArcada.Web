@@ -15,7 +15,7 @@ namespace ClubArcada.Web
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
                       "~/Scripts/angular.js",
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/parallax.js",
+                      "~/Scripts/materialize/materialize.js",
                       "~/Scripts/respond.js",
                       "~/Scripts/slippry.js",
                       "~/Scripts/app.js",
@@ -25,6 +25,7 @@ namespace ClubArcada.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/slippry.css",
+                      "~/Content/materialize/css/materialize.css",
                       "~/Content/site.css"));
         }
     }

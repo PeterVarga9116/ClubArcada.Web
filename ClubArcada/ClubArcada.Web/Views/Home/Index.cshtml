@@ -6,15 +6,31 @@
 
 <div ng-controller="ctrl-home">
 
-    <section id="sc-welcome" class="parallax-window" data-parallax="scroll" data-position-y="top" data-position-x="left">
+    <section id="sc-welcome" class="parallax">
+
         <div id="welcome-content" class="container">
             <div class="row">
                 <div class="col-md-6 col-xs-12">
-
+                    <div class="welcome-title">
+                        Welcome to<br/>Club Arcada
+                    </div>
                 </div>
 
                 <div class="col-md-6 col-xs-12">
-
+                    <div class="main-event-container">
+                        <div class="main-event-title">
+                            NEXT TOURNAMENT
+                        </div>
+                        <div class="main-event-name" data-ng-style="SetBackground(mainEvent.Colors)">
+                           {{ mainEvent.Name }}
+                        </div>
+                        <div class="main-event-desc">
+                            {{ mainEvent.DateCreatedFriendlyDateTime }}
+                        </div>
+                        <div class="main-event-desc">
+                           GTD €{{ mainEvent.GTD }}
+                        </div>
+                    </div>
                 </div>
 
             </div>
